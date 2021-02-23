@@ -13,7 +13,7 @@ namespace NJTalk
             String base_path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             String dictionary = base_path + @"\dic";
             String voice_data = base_path + @"\voice\nitech_jp_atr503_m001.htsvoice";
-            String wave_path = System.IO.Path.GetTempPath() + "\test.wav";
+            String wave_path = base_path + @"\test.wav";
 
             if (args.Length < 1)
                 return;
