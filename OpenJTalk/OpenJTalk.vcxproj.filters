@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="jpcommon">
+      <UniqueIdentifier>{4f403698-d3e7-4376-932d-7814d6c2c219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mecab2njd">
+      <UniqueIdentifier>{dcf6174c-28df-4044-981c-6d4015a887fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd">
+      <UniqueIdentifier>{0cfce4cc-af10-496d-adfe-a7b97bd9a5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd_set_accent_phrase">
+      <UniqueIdentifier>{5bbadb41-1ca1-4767-b4ea-262312920783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd_set_accent_type">
+      <UniqueIdentifier>{29949a6f-6fef-437c-a204-ae27fe9d81b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd_set_digit">
+      <UniqueIdentifier>{44a52ebd-a1d3-4fa6-b503-08cd5296f17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd_set_long_vowel">
+      <UniqueIdentifier>{1ad1b424-61b1-4fb5-bbf6-d60943c42099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd_set_pronunciation">
+      <UniqueIdentifier>{d86dada3-04f3-4001-ae27-c11e8304e59d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd_set_unvoiced_vowel">
+      <UniqueIdentifier>{6ea17fa7-a655-474a-a4e7-8f3968744ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="njd2jpcommon">
+      <UniqueIdentifier>{2e31fc18-84e5-40df-ab10-82d7c1a176ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text2mecab">
+      <UniqueIdentifier>{97220e96-1dc0-4db7-9e74-ca43769dc43a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>jpcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="mecab2njd\mecab2njd.h">
+      <Filter>mecab2njd</Filter>
+    </ClInclude>
+    <ClInclude Include="njd\njd.h">
+      <Filter>njd</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_accent_phrase\njd_set_accent_phrase.h">
+      <Filter>njd_set_accent_phrase</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_accent_type\njd_set_accent_type.h">
+      <Filter>njd_set_accent_type</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_digit\njd_set_digit.h">
+      <Filter>njd_set_digit</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_long_vowel\njd_set_long_vowel.h">
+      <Filter>njd_set_long_vowel</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_pronunciation\njd_set_pronunciation.h">
+      <Filter>njd_set_pronunciation</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_unvoiced_vowel\njd_set_unvoiced_vowel.h">
+      <Filter>njd_set_unvoiced_vowel</Filter>
+    </ClInclude>
+    <ClInclude Include="njd2jpcommon\njd2jpcommon.h">
+      <Filter>njd2jpcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="text2mecab\text2mecab.h">
+      <Filter>text2mecab</Filter>
+    </ClInclude>
+    <ClInclude Include="jpcommon\jpcommon_rule_ascii_for_utf_8.h">
+      <Filter>jpcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="jpcommon\jpcommon_rule_utf_8.h">
+      <Filter>jpcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_accent_phrase\njd_set_accent_phrase_rule_ascii_for_utf_8.h">
+      <Filter>njd_set_accent_phrase</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_accent_phrase\njd_set_accent_phrase_rule_utf_8.h">
+      <Filter>njd_set_accent_phrase</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_accent_type\njd_set_accent_type_rule_ascii_for_utf_8.h">
+      <Filter>njd_set_accent_type</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_accent_type\njd_set_accent_type_rule_utf_8.h">
+      <Filter>njd_set_accent_type</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_digit\njd_set_digit_rule_ascii_for_utf_8.h">
+      <Filter>njd_set_digit</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_digit\njd_set_digit_rule_utf_8.h">
+      <Filter>njd_set_digit</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_long_vowel\njd_set_long_vowel_rule_ascii_for_utf_8.h">
+      <Filter>njd_set_long_vowel</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_long_vowel\njd_set_long_vowel_rule_utf_8.h">
+      <Filter>njd_set_long_vowel</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_pronunciation\njd_set_pronunciation_rule_ascii_for_utf_8.h">
+      <Filter>njd_set_pronunciation</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_pronunciation\njd_set_pronunciation_rule_utf_8.h">
+      <Filter>njd_set_pronunciation</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_unvoiced_vowel\njd_set_unvoiced_vowel_rule_ascii_for_utf_8.h">
+      <Filter>njd_set_unvoiced_vowel</Filter>
+    </ClInclude>
+    <ClInclude Include="njd_set_unvoiced_vowel\njd_set_unvoiced_vowel_rule_utf_8.h">
+      <Filter>njd_set_unvoiced_vowel</Filter>
+    </ClInclude>
+    <ClInclude Include="njd2jpcommon\njd2jpcommon_rule_ascii_for_utf_8.h">
+      <Filter>njd2jpcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="njd2jpcommon\njd2jpcommon_rule_utf_8.h">
+      <Filter>njd2jpcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="text2mecab\text2mecab_rule_ascii_for_utf_8.h">
+      <Filter>text2mecab</Filter>
+    </ClInclude>
+    <ClInclude Include="text2mecab\text2mecab_rule_utf_8.h">
+      <Filter>text2mecab</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jpcommon\jpcommon.c">
+      <Filter>jpcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="jpcommon\jpcommon_label.c">
+      <Filter>jpcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="jpcommon\jpcommon_node.c">
+      <Filter>jpcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="mecab2njd\mecab2njd.c">
+      <Filter>mecab2njd</Filter>
+    </ClCompile>
+    <ClCompile Include="njd\njd.c">
+      <Filter>njd</Filter>
+    </ClCompile>
+    <ClCompile Include="njd\njd_node.c">
+      <Filter>njd</Filter>
+    </ClCompile>
+    <ClCompile Include="njd_set_accent_phrase\njd_set_accent_phrase.c">
+      <Filter>njd_set_accent_phrase</Filter>
+    </ClCompile>
+    <ClCompile Include="njd_set_accent_type\njd_set_accent_type.c">
+      <Filter>njd_set_accent_type</Filter>
+    </ClCompile>
+    <ClCompile Include="njd_set_digit\njd_set_digit.c">
+      <Filter>njd_set_digit</Filter>
+    </ClCompile>
+    <ClCompile Include="njd_set_long_vowel\njd_set_long_vowel.c">
+      <Filter>njd_set_long_vowel</Filter>
+    </ClCompile>
+    <ClCompile Include="njd_set_pronunciation\njd_set_pronunciation.c">
+      <Filter>njd_set_pronunciation</Filter>
+    </ClCompile>
+    <ClCompile Include="njd_set_unvoiced_vowel\njd_set_unvoiced_vowel.c">
+      <Filter>njd_set_unvoiced_vowel</Filter>
+    </ClCompile>
+    <ClCompile Include="njd2jpcommon\njd2jpcommon.c">
+      <Filter>njd2jpcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="text2mecab\text2mecab.c">
+      <Filter>text2mecab</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

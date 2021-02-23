@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1a6f5919-8903-47a8-a79b-001a59ca8d4d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\char_property.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\connector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\context_id.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dictionary.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dictionary_compiler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dictionary_generator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dictionary_rewriter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\eval.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\feature_index.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\iconv_utils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lbfgs.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\learner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\learner_tagger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libmecab.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mecab.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mecab-dict-index.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nbest_generator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\param.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\string_buffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tagger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tokenizer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\viterbi.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\writer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\char_property.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\connector.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\context_id.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\darts.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dictionary.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dictionary_rewriter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\feature_index.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\freelist.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\iconv_utils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lbfgs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\learner_node.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\learner_tagger.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mecab.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mmap.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nbest_generator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\param.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scoped_ptr.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stream_wrapper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\string_buffer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tokenizer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ucs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ucstable.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\viterbi.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\winmain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\writer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\NJTalk\\NJTalk.csproj": {}
+  },
+  "projects": {
+    "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\HTS_Engine\\HTS_Engine.vcxproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\HTS_Engine\\HTS_Engine.vcxproj",
+        "projectName": "HTS_Engine",
+        "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\HTS_Engine\\HTS_Engine.vcxproj"
+      },
+      "frameworks": {
+        "native": {}
+      }
+    },
+    "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\Mecab\\Mecab.vcxproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\Mecab\\Mecab.vcxproj",
+        "projectName": "Mecab",
+        "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\Mecab\\Mecab.vcxproj"
+      },
+      "frameworks": {
+        "native": {}
+      }
+    },
+    "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\NJTalk\\NJTalk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\NJTalk\\NJTalk.csproj",
+        "projectName": "NJTalk",
+        "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\NJTalk\\NJTalk.csproj",
+        "packagesPath": "D:\\Users\\Shohei\\.nuget\\packages",
+        "outputPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\NJTalk\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Shohei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalkSharp\\OpenJTalkSharp.vcxproj": {
+                "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalkSharp\\OpenJTalkSharp.vcxproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalkSharp\\OpenJTalkSharp.vcxproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalkSharp\\OpenJTalkSharp.vcxproj",
+        "projectName": "OpenJTalkSharp",
+        "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalkSharp\\OpenJTalkSharp.vcxproj",
+        "frameworks": {
+          "native": {
+            "projectReferences": {
+              "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\HTS_Engine\\HTS_Engine.vcxproj": {
+                "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\HTS_Engine\\HTS_Engine.vcxproj"
+              },
+              "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\Mecab\\Mecab.vcxproj": {
+                "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\Mecab\\Mecab.vcxproj"
+              },
+              "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalk\\OpenJTalk.vcxproj": {
+                "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalk\\OpenJTalk.vcxproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "native": {}
+      }
+    },
+    "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalk\\OpenJTalk.vcxproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalk\\OpenJTalk.vcxproj",
+        "projectName": "OpenJTalk",
+        "projectPath": "D:\\Users\\Shohei\\Documents\\Visual Studio 2017\\Projects\\OpenJTalk2\\OpenJTalk\\OpenJTalk.vcxproj"
+      },
+      "frameworks": {
+        "native": {}
+      }
+    }
+  }
+}
