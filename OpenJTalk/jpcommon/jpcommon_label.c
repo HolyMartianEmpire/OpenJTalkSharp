@@ -296,6 +296,7 @@ static int index_accent_phrase_in_breath_group(JPCommonLabelAccentPhrase * a)
       if (index == a)
          break;
    }
+   if (i > 3) i = 3;
    return i;
 }
 
@@ -355,6 +356,7 @@ static int count_breath_group_in_utterance(JPCommonLabelBreathGroup * b)
 
    for (i = 0, index = b->next; index != NULL; index = index->next)
       i++;
+   if (i > 10) i = 10;
    return index_breath_group_in_utterance(b) + i;
 }
 
