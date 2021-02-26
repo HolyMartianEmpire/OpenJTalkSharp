@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Configuration;
 using OpenJTalkSharp;
 
 namespace NJTalk
@@ -10,29 +11,33 @@ namespace NJTalk
     {
         static void Main(string[] args)
         {
-            String base_path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            String dictionary = base_path + @"\dic";
-            String voice_data = base_path + @"\voice\nitech_jp_atr503_m001.htsvoice";
-            String wave_path = base_path + @"\test.wav";
-
             if (args.Length < 1)
                 return;
 
             OpenJTalk ojt = new OpenJTalk()
             {
-                mecab_path = dictionary,
-                voice_path = voice_data,
-                alpha = 0.1,
-                beta = 0.1,
-                fperiod = 80,
-                sampling_rate = 16000,
-                uv_threshold = 0,
+                mecab_path = ConfigurationManager.AppSettings["dictionary"],
+                voice_path = ConfigurationManager.AppSettings["voice"],
+                alpha = double.Parse(ConfigurationManager.AppSettings["alpha"]),
+                beta = double.Parse(ConfigurationManager.AppSettings["beta"]),
+                fperiod = int.Parse(ConfigurationManager.AppSettings["fperiod"]),
+                sampling_rate = int.Parse(ConfigurationManager.AppSettings["sampling_rate"]),
+                uv_threshold = double.Parse(ConfigurationManager.AppSettings["uv_threshold"]),
             };
 
             ojt.initialize();
             ojt.load();
-            //ojt.talk(args[0]);
-            ojt.synthesis(args[0], wave_path);
+
+            if( args.Length >= 2)
+            {
+                var wave_path = args[1];
+                ojt.synthesis(args[0], wave_path);
+            }
+            else
+            {
+                ojt.talk(args[0]);
+            }
+
             ojt.clear();
         }
     }
