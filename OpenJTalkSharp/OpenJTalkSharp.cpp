@@ -63,6 +63,18 @@ namespace OpenJTalkSharp{
 		njd   = (NJD *)calloc(1,sizeof(NJD));
 		jpcommon = (JPCommon *)calloc(1,sizeof(JPCommon));
 		engine   = (HTS_Engine *)calloc(1,sizeof(HTS_Engine));
+
+		initialize();
+	}
+
+	OpenJTalk::~OpenJTalk() 
+	{
+		this->!OpenJTalk();
+	}
+
+	OpenJTalk::!OpenJTalk()
+	{
+		clear();
 	}
 	
 	void OpenJTalk::initialize() 

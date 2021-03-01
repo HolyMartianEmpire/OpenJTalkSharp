@@ -25,7 +25,7 @@ namespace NJTalk
                 uv_threshold = double.Parse(ConfigurationManager.AppSettings["uv_threshold"]),
             };
 
-            ojt.initialize();
+            //設定値反映
             ojt.load();
 
             if( args.Length >= 2)
@@ -37,8 +37,6 @@ namespace NJTalk
             {
                 ojt.talk(args[0]);
             }
-
-            ojt.clear();
         }
     }
 }

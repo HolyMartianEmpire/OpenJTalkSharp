@@ -31,11 +31,15 @@ namespace OpenJTalkSharp {
 	public ref class OpenJTalk
 	{
 		// TODO: このクラスの、ユーザーのメソッドをここに追加してください。
-	private:
+	protected:
 		Mecab *mecab;
 		NJD *njd;
 		JPCommon *jpcommon;
 		HTS_Engine *engine;
+
+		void initialize();
+		void clear();
+
 
 	public:
 		System::String ^mecab_path;
@@ -56,11 +60,9 @@ namespace OpenJTalkSharp {
 		HTS_Boolean use_log_gain;
 
 		OpenJTalk();
+		~OpenJTalk();
+		!OpenJTalk();
 
-		void initialize();
-		
-		void clear();
-		
 		void load();
 
 		int talk(String^ text);
