@@ -23,6 +23,7 @@ namespace NJTalk
                 ojt.fperiod = int.Parse(ConfigurationManager.AppSettings["fperiod"]);
                 ojt.sampling_rate = int.Parse(ConfigurationManager.AppSettings["sampling_rate"]);
                 ojt.uv_threshold = double.Parse(ConfigurationManager.AppSettings["uv_threshold"]);
+                ojt.udic_path = ConfigurationManager.AppSettings["user_dic"];
 
                 //設定値反映
                 ojt.load();

@@ -1,7 +1,9 @@
 {
   "profiles": {
     "NJTalk": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "エヴァンゲリオン",
+      "nativeDebugging": true
     }
   }
 }

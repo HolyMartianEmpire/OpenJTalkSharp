@@ -94,8 +94,7 @@ namespace OpenJTalkSharp{
 		char *dn_udic   = (udic_path ==nullptr) ? NULL : (char *)Marshal::StringToHGlobalAnsi(udic_path).ToPointer();
 		char *fn_voice  = (voice_path==nullptr) ? NULL : (char *)Marshal::StringToHGlobalAnsi(voice_path).ToPointer();
 		
-//		Mecab_load(mecab, dn_mecab, dn_udic);
-		Mecab_load(mecab, dn_mecab);
+		Mecab_load(mecab, dn_mecab, dn_udic);
 
 		HTS_Engine_load(engine, &fn_voice, 1);
 
