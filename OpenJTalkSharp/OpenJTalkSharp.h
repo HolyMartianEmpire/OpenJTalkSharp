@@ -37,36 +37,61 @@ namespace OpenJTalkSharp {
 		JPCommon *jpcommon;
 		HTS_Engine *engine;
 
-		void initialize();
 		void clear();
 
-
-	public:
-		System::String ^mecab_path;
-		System::String ^udic_path;
-		System::String ^voice_path;
-		int	sampling_rate;
-		int	fperiod;
-		double alpha;
-		int stage;
-		double beta;
-		int audio_buff_size;
-		double uv_threshold;
-		double gv_weight_mgc;
+		//現状、未使用
 		double gv_weight_lf0;
 		double gv_weight_lpf;
-		
+		//現状、未使用
 		HTS_Boolean use_lpf;
 		HTS_Boolean use_log_gain;
 
-		OpenJTalk();
+	public:
+		
+		OpenJTalk(System::String^ voice_path, System::String^ mecab_path);
+		OpenJTalk(System::String ^voice_path, System::String^ mecab_path, System::String^ udic_path);
 		~OpenJTalk();
 		!OpenJTalk();
 
-		void load();
+		property int sampling_rate {
+			void set(int val);
+		}
+
+		property int fperiod {
+			void set(int val);
+		}
+
+		property int audio_buff_size {
+			void set(int val);
+		}
+
+		property double alpha {
+			void set(double val);
+		}
+
+		property double beta {
+			void set(double val);
+		}
+		
+		property double uv_threshold {
+			void set(double val);
+		}
+
+		property double gv_weight_mgc {
+			void set(double val);
+		}
+
+		property double speed {
+			void set(double val);
+		}
+
+		property double half_tone {
+			void set(double val);
+		}
 
 		int talk(String^ text);
 
 		int synthesis(String ^text, String ^wavefile);
+
 	};
 }

@@ -35,21 +35,33 @@ using namespace System::Runtime::InteropServices;
 
 namespace OpenJTalkSharp{
 
-	OpenJTalk::OpenJTalk()
+	OpenJTalk::OpenJTalk(System::String^ voice_path, System::String^ mecab_path, System::String^ udic_path)
 	{
-		mecab = NULL;
-		njd = NULL;
-		jpcommon = NULL;
-		engine = NULL;
+		char* dn_mecab = (mecab_path == nullptr) ? NULL : (char*)Marshal::StringToHGlobalAnsi(mecab_path).ToPointer();
+		char* dn_udic = (udic_path == nullptr) ? NULL : (char*)Marshal::StringToHGlobalAnsi(udic_path).ToPointer();
+		char* fn_voice = (voice_path == nullptr) ? NULL : (char*)Marshal::StringToHGlobalAnsi(voice_path).ToPointer();
 
-		mecab_path = nullptr;
-		udic_path  = nullptr;
-		voice_path = nullptr;
+		mecab = (Mecab *)calloc(1,sizeof(Mecab));
+		njd   = (NJD *)calloc(1,sizeof(NJD));
+		jpcommon = (JPCommon *)calloc(1,sizeof(JPCommon));
+		engine   = (HTS_Engine *)calloc(1,sizeof(HTS_Engine));
 
+		Mecab_initialize(mecab);
+		NJD_initialize(njd);
+		JPCommon_initialize(jpcommon);
+		HTS_Engine_initialize(engine);
+
+		Mecab_load(mecab, dn_mecab, dn_udic);
+
+		HTS_Engine_load(engine, &fn_voice, 1);
+
+		Marshal::FreeHGlobal((IntPtr)fn_voice);
+		Marshal::FreeHGlobal((IntPtr)dn_mecab);
+		Marshal::FreeHGlobal((IntPtr)dn_udic);
+		
 		sampling_rate = 16000;
 		fperiod = 80;
 		alpha = 0.42;
-		stage = 0;
 		beta = 0.0;
 		audio_buff_size = 0;
 		uv_threshold = 0.5;
@@ -58,13 +70,13 @@ namespace OpenJTalkSharp{
 		gv_weight_lpf = 1.0;
 		use_log_gain = FALSE;
 		use_lpf = FALSE;
+		speed = 1.0;
+		half_tone = 0;
+	}
 
-		mecab = (Mecab *)calloc(1,sizeof(Mecab));
-		njd   = (NJD *)calloc(1,sizeof(NJD));
-		jpcommon = (JPCommon *)calloc(1,sizeof(JPCommon));
-		engine   = (HTS_Engine *)calloc(1,sizeof(HTS_Engine));
-
-		initialize();
+	OpenJTalk::OpenJTalk(System::String^ voice_path, System::String^ mecab_path)
+	{
+		OpenJTalk(voice_path, mecab_path, nullptr);
 	}
 
 	OpenJTalk::~OpenJTalk() 
@@ -77,41 +89,49 @@ namespace OpenJTalkSharp{
 		clear();
 	}
 	
-	void OpenJTalk::initialize() 
+	void OpenJTalk::sampling_rate::set(int val)
 	{
-		Mecab_initialize(mecab);
-		NJD_initialize(njd);
-		JPCommon_initialize(jpcommon);
-		HTS_Engine_initialize(engine);
-
-		return ;
+		HTS_Engine_set_sampling_frequency(engine, val);
 	}
 
-	void OpenJTalk::load() 
+	void OpenJTalk::fperiod::set(int val)
 	{
+		HTS_Engine_set_fperiod(engine, val);
+	}
 
-		char *dn_mecab  = (mecab_path==nullptr) ? NULL : (char *)Marshal::StringToHGlobalAnsi(mecab_path).ToPointer();
-		char *dn_udic   = (udic_path ==nullptr) ? NULL : (char *)Marshal::StringToHGlobalAnsi(udic_path).ToPointer();
-		char *fn_voice  = (voice_path==nullptr) ? NULL : (char *)Marshal::StringToHGlobalAnsi(voice_path).ToPointer();
-		
-		Mecab_load(mecab, dn_mecab, dn_udic);
+	void OpenJTalk::audio_buff_size::set(int val)
+	{
+		HTS_Engine_set_audio_buff_size(engine, val);
+	}
+	
+	void OpenJTalk::alpha::set(double val)
+	{
+		HTS_Engine_set_alpha(engine, val);
+	}
 
-		HTS_Engine_load(engine, &fn_voice, 1);
+	void OpenJTalk::beta::set(double val)
+	{
+		HTS_Engine_set_beta(engine, val);
+	}
+	
+	void OpenJTalk::uv_threshold::set(double val)
+	{
+		HTS_Engine_set_msd_threshold(engine, 1, val);
+	}
 
-		HTS_Engine_set_sampling_frequency(engine, sampling_rate);
-		HTS_Engine_set_alpha(engine, alpha);
-		HTS_Engine_set_fperiod(engine, fperiod);
-		HTS_Engine_set_beta(engine, beta);
-		HTS_Engine_set_speed(engine, 1);
-		HTS_Engine_add_half_tone(engine, 0);
-		HTS_Engine_set_msd_threshold(engine, 1, uv_threshold);
-		HTS_Engine_set_gv_weight(engine, 1, gv_weight_mgc);
-		HTS_Engine_set_audio_buff_size(engine, audio_buff_size);
+	void OpenJTalk::gv_weight_mgc::set(double val)
+	{
+		HTS_Engine_set_gv_weight(engine, 1, val);
+	}
 
-		Marshal::FreeHGlobal((IntPtr)fn_voice);
-		Marshal::FreeHGlobal((IntPtr)dn_mecab);
-		
-		return ;
+	void OpenJTalk::speed::set(double val)
+	{
+		HTS_Engine_set_speed(engine, val);
+	}
+
+	void OpenJTalk::half_tone::set(double val)
+	{
+		HTS_Engine_add_half_tone(engine, val);
 	}
 
 	int OpenJTalk::talk(String^ text) {
@@ -146,7 +166,8 @@ namespace OpenJTalkSharp{
 				HTS_Engine_set_audio_buff_size(engine, 0);
 			}
 			else {
-				HTS_Engine_set_audio_buff_size(engine, sampling_rate);
+				int rate = HTS_Engine_get_sampling_frequency(engine);
+				HTS_Engine_set_audio_buff_size(engine, rate);
 			}
 
 			//çáê¨
@@ -159,13 +180,14 @@ namespace OpenJTalkSharp{
 			if( wavefile != nullptr ){
 				char *fname = (char *)Marshal::StringToHGlobalAnsi(wavefile).ToPointer();
 				FILE* wavfp;
-				
+
 				fopen_s(&wavfp,fname, "wb");
-				Marshal::FreeHGlobal((IntPtr)fname);
 				if( wavfp != NULL ){
 					HTS_Engine_save_riff(engine, wavfp);
 					fclose(wavfp);
 				}
+
+				Marshal::FreeHGlobal((IntPtr)fname);
 			}
 
 			HTS_Engine_refresh(engine);

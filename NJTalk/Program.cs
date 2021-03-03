@@ -14,19 +14,17 @@ namespace NJTalk
             if (args.Length < 1)
                 return;
 
-            using (OpenJTalk ojt = new OpenJTalk())
+            var voice_path = ConfigurationManager.AppSettings["voice"];
+            var mecab_path = ConfigurationManager.AppSettings["dictionary"];
+            var udic_path = ConfigurationManager.AppSettings["user_dic"];
+
+            using (OpenJTalk ojt = new OpenJTalk(voice_path, mecab_path, udic_path))
             {
-                ojt.mecab_path = ConfigurationManager.AppSettings["dictionary"];
-                ojt.voice_path = ConfigurationManager.AppSettings["voice"];
                 ojt.alpha = double.Parse(ConfigurationManager.AppSettings["alpha"]);
                 ojt.beta = double.Parse(ConfigurationManager.AppSettings["beta"]);
                 ojt.fperiod = int.Parse(ConfigurationManager.AppSettings["fperiod"]);
                 ojt.sampling_rate = int.Parse(ConfigurationManager.AppSettings["sampling_rate"]);
                 ojt.uv_threshold = double.Parse(ConfigurationManager.AppSettings["uv_threshold"]);
-                ojt.udic_path = ConfigurationManager.AppSettings["user_dic"];
-
-                //設定値反映
-                ojt.load();
 
                 if (args.Length >= 2)
                 {
