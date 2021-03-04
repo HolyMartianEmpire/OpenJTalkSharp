@@ -74,9 +74,9 @@ namespace OpenJTalkSharp{
 		half_tone = 0;
 	}
 
-	OpenJTalk::OpenJTalk(System::String^ voice_path, System::String^ mecab_path)
+	OpenJTalk::OpenJTalk(System::String^ voice_path, System::String^ mecab_path) : OpenJTalk(voice_path, mecab_path, nullptr)
 	{
-		OpenJTalk(voice_path, mecab_path, nullptr);
+		//“Á•Ê‚È‚à‚Ì‚È‚µ
 	}
 
 	OpenJTalk::~OpenJTalk() 
