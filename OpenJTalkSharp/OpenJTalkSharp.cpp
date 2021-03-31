@@ -144,7 +144,7 @@ namespace OpenJTalkSharp{
 		pin_ptr<Byte> pp = &p[0];
 		char* txt = (char*)pp;
 
-		char *buff  = new char[strlen(txt) * 2 + 1];
+		char* buff = new char[10 * 1024];	//10MB
 		int	time = 0;
 		
 		text2mecab(buff, txt);						//Mecab—p‚É•¶š‚ğ•ÏX
